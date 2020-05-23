@@ -1,0 +1,13 @@
+require_relative "./config/environment"
+require "sinatra/activerecord/rake"
+
+def reload!
+  load_all "./lib"
+end
+
+desc "starts the console"
+task :console do
+  Pry.start
+end
+
+
